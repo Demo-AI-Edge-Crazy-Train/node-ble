@@ -144,6 +144,7 @@ class Device extends EventEmitter {
    */
   async disconnect () {
     await this.helper.callMethod('Disconnect')
+    this.helper.removeListeners()
   }
 
   /**
